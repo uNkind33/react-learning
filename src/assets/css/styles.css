@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+}
+
+button {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.blog-name,
+.blog-text,
+.blog-create {
+    display: block;
+    padding: 15px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #898989;
+    width: 100%;
+}
+
+.blog-create {
+    cursor: pointer;
+    color: #000;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    background: #827878;
+    border: 2px solid transparent;
+    color: #fff;
+    margin: 0;
+}
+
+.blog-create:hover {
+    border: 2px solid #555;
+    background: #fff;
+    color: #555;
+}
+
+.blog-name,
+.blog-text {
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-create:focus {
+    outline: 0;
+}
+
+.blog-name:focus,
+.blog-text:focus {
+    outline: none;
+} 
+
+.input::-webkit-input-placeholder       { opacity: 1; transition: opacity 0.3s ease; }
+.input::-moz-placeholder                { opacity: 1; transition: opacity 0.3s ease; }
+.input:-moz-placeholder                 { opacity: 1; transition: opacity 0.3s ease; } 
+.input:-ms-input-placeholder            { opacity: 1; transition: opacity 0.3s ease; }
+.input:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.3s ease; }
+.input:focus::-moz-placeholder          { opacity: 0; transition: opacity 0.3s ease; }
+.inpute:focus:-moz-placeholder          { opacity: 0; transition: opacity 0.3s ease; }
+.input:focus:-ms-input-placeholder      { opacity: 0; transition: opacity 0.3s ease; }
+
+.blog-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.blog-items li {
+    border: 2px solid #247db5;
+    border-radius: 3px;
+    margin: 15px 0;
+    padding: 0 15px 20px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 3px 7 px #777;
+	-moz-box-shadow: 0 3px 7px #777;
+    box-shadow: 0 3px 7px #777;
+    position: relative;
+} 
+
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    border: 0;
+    background: none;
+    color:#000;
+    border: 1px solid transparent;
+}
+
+ .remove-btn:hover {
+    border: 1px solid red;
+    color: red;
+} 
+
+.remove-btn:hover {
+    cursor: pointer
+}
+
+.images {
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.images.main {
+    justify-content: flex-start;
+}
+
+.images.main.space-between {
+    justify-content: space-between;   
+}
+
+.images.main li {
+    margin: 0 10px 5px 0;
+}
+
+.photo-wrap {
+    width: 200px;
+}
+
+.photo-wrap img {
+    width: 100%;
+}
+
+.photo-wrap.main {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.filepicker {
+    font-family: sans-serif;
+    width: 500px;
+}
+
+.dropzone .dz-preview {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 16px;
+    min-height: 100px;
+}
+
+.inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inner-container .data-wrap,
+.inner-container .drop-zone-wrap {
+    flex: 0 1 47%;
+}
+
+.drop-zone-wrap div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.drop-zone-wrap p {
+    text-align: center;
+}
+
+.show-message {
+    font-size: 20px;
+    color: #18891a;
+    margin: 15px 0;
+    position: absolute;
+    top: 2%;
+    left: 35%;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.label-title {
+    font-size: 20px;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.error-warning {
+    border-color: red;
+}
+
+.success {
+    border-color: #23a326
+}
+
+.comment-wrap {
+    width: 250px;
+}
+
+.comment-input {
+    width: 100%;  
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.post-btn {
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #898989;
+    background: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.post-btn:hover {
+    cursor: pointer;
+}
+
+.comments {
+    padding: 0;
+    max-height: 414px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.comments li {
+    padding: 10px;
+    background: #fff;
+}
+
+.comments-item {
+    display: block;
+    overflow: hidden;
+    margin: 7px 0;
+    text-decoration: underline;
+    color: #505450;
+}
+
+.comments-item .heading {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    font-weight: 600;
+}
+
+.comment-wrap h4 {
+    text-align: center;
+}
