@@ -1,19 +1,15 @@
 import React, { PureComponent } from 'react';
 import Comment from '../comment/index';
+import ToggleOpen from '../../decorators/toggleOpen/index';
 
-export default class CommentList extends PureComponent {
+class CommentList extends PureComponent {
     static defaultProps = {
         comments: [],
     }
 
-    state = {
-        isOpnen: false,
-    }
-
     getBody() {
-        if (!this.state.isOpen) return null;
-
-        const { comments } = this.props;
+        const { comments, isOpen } = this.props;
+        if (!isOpen) return null;
         if (!comments.length) return <p>No comments yet</p>;
 
         return (
@@ -23,19 +19,16 @@ export default class CommentList extends PureComponent {
         );
     }
 
-    toggleOpen = () => {
-        this.setState({
-            isOpen: !this.state.isOpen,
-        });
-    }
-
     render() {
-        const text = this.state.isOpen ? 'hide comment' : 'show comment';
+        const { isOpen, toggleOpen } = this.props;
+        const text = isOpen ? 'hide comment' : 'show comment';
         return (
             <div>
-                <button onClick={this.toggleOpen}>{text}</button>
+                <button onClick={toggleOpen}>{text}</button>
                 {this.getBody()}
             </div>
         );
     }
 }
+
+export default ToggleOpen(CommentList);

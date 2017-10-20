@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import CommentList from '../commentList/index';
-import ToggleOpen from '../../decorators/toggleOpen/index';
+// import ToggleOpen from '../../decorators/toggleOpen/index';
 
-class Article extends PureComponent {
+export default class Article extends PureComponent {
     static defaultProps = {
         articles: [],
         isOpen: false,
@@ -40,5 +40,3 @@ class Article extends PureComponent {
         );
     }
 }
-
-export default ToggleOpen(Article);
